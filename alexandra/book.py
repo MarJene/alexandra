@@ -24,4 +24,7 @@ class Book(object):
         self._author = author
 
     def description(self):
-        return "_{}_ by **{}** [Coming Soon]".format(self.title(), self.author())
+        return "_{}_ by **{}** [Coming Soon]".format(
+            self.title(),
+            self.author(),
+            )
