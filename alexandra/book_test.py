@@ -47,3 +47,9 @@ class Book_Test(unittest.TestCase):
         book.setAuthor("JK Rowling")
         description = book.description()
         self.assertEqual(description, "_untitled_ by **JK Rowling** [Coming Soon]")
+
+    def test_description_putOnSale(self):
+        book = Book()
+        book.putOnSale()
+        description = book.description()
+        self.assertEqual(description, "_untitled_ by **Anonymous** [On Sale]")

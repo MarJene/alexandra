@@ -24,7 +24,7 @@ class Book(object):
         self._author = author
 
     def description(self):
-        return "_{}_ by **{}** [Coming Soon]".format(
+        return "_{}_ by **{}** [{}]".format(
             self.title(),
             self.author(),
-            )
+            "On Sale" if self._onSale else "Coming Soon")
