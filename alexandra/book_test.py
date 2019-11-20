@@ -12,3 +12,7 @@ class Book_Test(unittest.TestCase):
         book = Book()
         book.setTitle("Harry Potter 1")
         self.assertEqual(book.title(), "Harry Potter 1")
+
+    def test_isOnSale_byDefault(self):
+        book = Book()
+        self.assertFalse(book.isOnSale())

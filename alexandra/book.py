@@ -8,3 +8,6 @@ class Book(object):
 
     def setTitle(self, title):
         self._title = title
+
+    def isOnSale(self):
+        return False
