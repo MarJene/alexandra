@@ -2,6 +2,7 @@ class Book(object):
 
     def __init__(self):
         self._title = "untitled"
+        self._onSale = False
 
     def title(self):
         return self._title
@@ -10,4 +11,7 @@ class Book(object):
         self._title = title
 
     def isOnSale(self):
-        return False
+        return self._onSale
+
+    def putOnSale(self):
+        pass

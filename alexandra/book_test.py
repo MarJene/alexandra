@@ -16,3 +16,8 @@ class Book_Test(unittest.TestCase):
     def test_isOnSale_byDefault(self):
         book = Book()
         self.assertFalse(book.isOnSale())
+
+    def _test_isOnSale_whenSet(self):
+        book = Book()
+        book.putOnSale()
+        self.assertEqual(book.isOnSale(), True)
