@@ -21,3 +21,7 @@ class Book_Test(unittest.TestCase):
         book = Book()
         book.putOnSale()
         self.assertEqual(book.isOnSale(), True)
+
+    def test_author_byDefault(self):
+        book = Book()
+        self.assertEqual(book.author(), "Anonymous")

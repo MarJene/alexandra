@@ -15,3 +15,6 @@ class Book(object):
 
     def putOnSale(self):
         self._onSale = True
+
+    def author(self):
+        return "Anonymous"
