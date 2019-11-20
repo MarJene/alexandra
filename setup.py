@@ -21,6 +21,7 @@ setup(
     install_requires=[
         'nose',
         'rednose',
+        'somutils',
     ],
     include_package_data = True,
     test_suite = 'alexandra',
