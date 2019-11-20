@@ -14,4 +14,4 @@ class Book(object):
         return self._onSale
 
     def putOnSale(self):
-        pass
+        self._onSale = True
