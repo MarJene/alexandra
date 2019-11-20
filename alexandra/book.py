@@ -3,6 +3,7 @@ class Book(object):
     def __init__(self):
         self._title = "untitled"
         self._onSale = False
+        self._author = "Anonymous"
 
     def title(self):
         return self._title
