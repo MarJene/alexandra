@@ -35,3 +35,9 @@ class Book_Test(unittest.TestCase):
         book = Book()
         description = book.description()
         self.assertEqual(description, "_untitled_ by **Anonymous** [Coming Soon]")
+
+    def test_description_withTitleSet(self):
+        book = Book()
+        book.setTitle("Harry Potter 1")
+        description = book.description()
+        self.assertEqual(description, "_Harry Potter 1_ by **Anonymous** [Coming Soon]")
