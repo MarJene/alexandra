@@ -19,7 +19,8 @@ setup(
     scripts=[
     ],
     install_requires=[
-        'unittest',
+        'nose',
+        'rednose',
     ],
     include_package_data = True,
     test_suite = 'alexandra',
