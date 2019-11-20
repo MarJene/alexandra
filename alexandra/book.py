@@ -22,3 +22,6 @@ class Book(object):
 
     def setAuthor(self, author):
         self._author = author
+
+    def description(self):
+        return "_untitled_ by **Anonymous** [Coming Soon]"
