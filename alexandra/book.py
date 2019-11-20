@@ -7,4 +7,4 @@ class Book(object):
         return self._title
 
     def setTitle(self, title):
-        pass
+        self._title = title

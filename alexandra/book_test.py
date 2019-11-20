@@ -8,7 +8,6 @@ class Book_Test(unittest.TestCase):
         book = Book()
         self.assertEqual(book.title(), "untitled")
 
-    @unittest.skip("not implemented yet")
     def test_title_whenSet(self):
         book = Book()
         book.setTitle("Harry Potter 1")
