@@ -31,7 +31,7 @@ class Book_Test(unittest.TestCase):
         book.setAuthor("JK Rowling")
         self.assertEqual(book.author(), "JK Rowling")
 
-    def test_description(self):
+    def test_description_byDefault(self):
         book = Book()
         description = book.description()
         self.assertEqual(description, "_untitled_ by **Anonymous** [Coming Soon]")
@@ -41,3 +41,9 @@ class Book_Test(unittest.TestCase):
         book.setTitle("Harry Potter 1")
         description = book.description()
         self.assertEqual(description, "_Harry Potter 1_ by **Anonymous** [Coming Soon]")
+
+    def test_description_withAuthorSet(self):
+        book = Book()
+        book.setAuthor("JK Rowling")
+        description = book.description()
+        self.assertEqual(description, "_untitled_ by **JK Rowling** [Coming Soon]")
