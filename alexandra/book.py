@@ -19,3 +19,6 @@ class Book(object):
 
     def author(self):
         return self._author
+
+    def setAuthor(self, author):
+        self._author = author

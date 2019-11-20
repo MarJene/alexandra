@@ -25,3 +25,8 @@ class Book_Test(unittest.TestCase):
     def test_author_byDefault(self):
         book = Book()
         self.assertEqual(book.author(), "Anonymous")
+
+    def test_author_whenSet(self):
+        book = Book()
+        book.setAuthor("JK Rowling")
+        self.assertEqual(book.author(), "JK Rowling")
