@@ -10,7 +10,7 @@ class Catalog(object):
 {}
 """.format(
         "No books available at the moment" if not self._book
-        else self._listBooks()
+        else self.listBooks()
     )
 
     def book(self):
@@ -19,7 +19,7 @@ class Catalog(object):
     def addBook(self, book):
         self._book.append(book)
 
-    def _listBooks(self):
+    def listBooks(self):
         items = ""
         for book in self._book:
             items = items + "- {}\n".format(book.description())
