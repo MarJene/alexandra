@@ -53,3 +53,12 @@ No books available at the moment
     def test_listBooks_byDefault(self):
         catalog = Catalog()
         self.assertEqual(catalog._listBooks(), "No books available at the moment")
+
+    def test_listBooks_oneBook(self):
+        catalog = Catalog()
+        book = Book()
+        catalog.addBook(book)
+        self.assertEqual(
+            catalog._listBooks(),
+            "- {}\n".format(book.description())
+        )
