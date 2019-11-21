@@ -30,11 +30,19 @@ No books available at the moment
         catalog = Catalog()
         self.assertEqual(catalog.books(), None)
 
-    def test_books_whenSet(self):
+    def test_books_whenSetOne(self):
         catalog = Catalog()
         book = Book()
         catalog.addBook(book)
-        self.assertEqual(catalog.books(), book)
+        self.assertEqual(catalog.books(), [book])
+
+    def test_books_whenMany(self):
+        catalog = Catalog()
+        book1 = Book()
+        book2 = Book()
+        catalog.addBook(book1)
+        catalog.addBook(book2)
+        self.assertEqual(catalog.books(), [book1, book2])
 
     def test_description_manyBooks(self):
             catalog = Catalog()

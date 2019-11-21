@@ -14,7 +14,7 @@ class Catalog(object):
     )
 
     def books(self):
-        return None if not self._books else self._books[0]
+        return None if not self._books else self._books
 
     def addBook(self, book):
         self._books.append(book)
