@@ -23,12 +23,12 @@ No books available at the moment
 - {}
 """.format(book.description()))
 
-    def _test_addBook(self):
+    def test_book_byDefault(self):
+        catalog = Catalog()
+        self.assertEqual(catalog.book(), None)
+
+    def _test_book_whenSet(self):
         catalog = Catalog()
         book = Book()
         catalog.addBook(book)
         self.assertEqual(catalog.book(), book)
-
-    def test_book_byDefault(self):
-        catalog = Catalog()
-        self.assertEqual(catalog.book(), None)

@@ -1,5 +1,7 @@
 class Catalog(object):
 
+    def __init__(self):
+        self._book = None
 
     def description(self):
         return """\
@@ -8,6 +10,8 @@ class Catalog(object):
 No books available at the moment
 """
 
-
     def book(self):
-        return None
+        return self._book
+
+    def addBook(self, book):
+        pass
