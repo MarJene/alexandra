@@ -14,4 +14,4 @@ No books available at the moment
         return self._book
 
     def addBook(self, book):
-        pass
+        self._book = book

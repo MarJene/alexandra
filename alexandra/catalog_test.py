@@ -27,7 +27,7 @@ No books available at the moment
         catalog = Catalog()
         self.assertEqual(catalog.book(), None)
 
-    def _test_book_whenSet(self):
+    def test_book_whenSet(self):
         catalog = Catalog()
         book = Book()
         catalog.addBook(book)
