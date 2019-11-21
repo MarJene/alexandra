@@ -8,13 +8,19 @@ class Catalog(object):
 # Alexandra's Catalog
 
 {}
-""".format(
-            self._book[0].description() if self._book
-            else "No books available at the moment"
-        )
+""".format(self._listBooks())
 
     def book(self):
         return None if not self._book else self._book[0]
 
     def addBook(self, book):
         self._book.append(book)
+
+    def _listBooks(self):
+        items = ""
+        if not self._book:
+            items = "No books available at the moment"
+        else:
+            for book in self._book:
+                items = items + "- {}\n".format(book.description())
+        return items
