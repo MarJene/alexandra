@@ -36,7 +36,7 @@ No books available at the moment
         catalog.addBook(book)
         self.assertEqual(catalog.book(), book)
 
-    def _test_description_manyBooks(self):
+    def test_description_manyBooks(self):
             catalog = Catalog()
             book1 = Book()
             book2 = Book()
