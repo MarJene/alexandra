@@ -1,7 +1,7 @@
 class Catalog(object):
 
     def __init__(self):
-        self._book = None
+        self._book = []
 
     def description(self):
         return """\
@@ -9,12 +9,12 @@ class Catalog(object):
 
 {}
 """.format(
-            self._book.description() if self._book
+            self._book[0].description() if self._book
             else "No books available at the moment"
         )
 
     def book(self):
-        return self._book
+        return None if not self._book else self._book[0]
 
     def addBook(self, book):
-        self._book = book
+        self._book.append(book)
