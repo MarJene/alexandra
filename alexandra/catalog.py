@@ -1,7 +1,7 @@
 class Catalog(object):
 
     def __init__(self):
-        self._book = []
+        self._books = []
 
     def description(self):
         return """\
@@ -9,18 +9,18 @@ class Catalog(object):
 
 {}
 """.format(
-        "No books available at the moment" if not self._book
+        "No books available at the moment" if not self._books
         else self.listBooks()
     )
 
-    def book(self):
-        return None if not self._book else self._book[0]
+    def books(self):
+        return None if not self._books else self._books[0]
 
     def addBook(self, book):
-        self._book.append(book)
+        self._books.append(book)
 
     def listBooks(self):
         items = ""
-        for book in self._book:
+        for book in self._books:
             items = items + "- {}\n".format(book.description())
         return items
