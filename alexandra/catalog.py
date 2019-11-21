@@ -7,8 +7,11 @@ class Catalog(object):
         return """\
 # Alexandra's Catalog
 
-No books available at the moment
-"""
+{}
+""".format(
+            self._book.description() if self._book
+            else "No books available at the moment"
+        )
 
     def book(self):
         return self._book

@@ -13,14 +13,14 @@ class Catalog_Test(unittest.TestCase):
 No books available at the moment
 """)
 
-    def _test_description_oneBook(self):
+    def test_description_oneBook(self):
         catalog = Catalog()
         book = Book()
         catalog.addBook(book)
         self.assertEqual(catalog.description(), """\
 # Alexandra's Catalog
 
-- {}
+{}
 """.format(book.description()))
 
     def test_book_byDefault(self):
